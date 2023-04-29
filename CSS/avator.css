@@ -1,0 +1,12 @@
+	 .avator img{
+				border: #000 solid 1px;
+				display: block;
+				margin: 1px auto;
+				border-radius: 50%;
+				transition: all 2.0s;
+			}
+			img:hover{
+				transform: rotate(360deg);
+			}
+		
+

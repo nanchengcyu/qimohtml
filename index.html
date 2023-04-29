@@ -1,0 +1,196 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>MyLife-the world is large,which should be seen by everyone.</title>
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" type="text/css" href="css/dyback.css">
+	<script type="text/javascript" src="JS/jquery.js"></script>
+<script type="text/javascript" src="JS/jquery.cycle.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('.banner').cycle({ 
+		           fx:'scrollLeft'			
+		});
+	})
+</script>
+	<script src="JS/time.js" language="javascript">
+
+</script>
+<style>
+	.showtime{
+		width: 1240px;
+		height:30px;
+		color: aliceblue;
+		text-align: center
+		}
+	.banner
+	{ width:980px;
+		margin:0px auto;
+		height:210px;
+		overflow:hidden;
+		z-index:2;
+	    border: 1px solid white;
+            box-shadow: 1px 1px 5px #666;
+            border-radius: 10px;
+	}
+
+.top img {
+	width: 50px;
+	opacity: 0.5;
+}
+.introduce {
+	display: flex;
+	flex-direction: column;
+}
+.introduce_item {
+	display: flex;
+	justify-content: center;
+	margin-top: 60px;
+}
+.introduce_item_img {
+	width: 800px;
+	height: 500px;
+}
+.introduce_item_title {
+	width: 300px;
+	font-size: 18px;
+	line-height: 36px;
+	align-self: center;
+	padding-left: 100px;
+}
+</style>
+<script>
+window.onload = function(){ 
+     var audio = document.getElementById('music');
+         audio.pause();
+}
+function play() {
+    var audio = document.getElementById('music');
+    if (audio.paused) {
+        audio.play();
+        document.getElementById('musicImg').src="images/play.png";
+    }else{
+        audio.pause();
+        audio.currentTime = 0;//音乐从头播放
+        document.getElementById('musicImg').src="images/stop.png";
+    }
+}
+	
+</script> 
+
+</head>
+
+<body onload="reloop()">
+<header><a href="index.html"><img src="image/logo.png" alt="logo" width="200px" style="opacity: 0.5;"></a>
+  <h2><em>MyLife-the world is large,which should be seen by everyone.</em></h2>
+  <div ><a href="member/login.html" target="_blank" style="color: white">登录</a>&nbsp;<a href="member/register.html" target="_blank" style="color: white">注册</a><br>
+    <form name="search">
+      <input type="search" placeholder="Search" style= "background-color:transparent ; border-top-left-radius: 10px;
+            border-top-right-radius: 0px;    /* 右上角 */
+
+            border-bottom-left-radius: 10px;  /* 左下角 */
+
+            border-bottom-right-radius: 0px; /* 右下角 */" 
+>
+      <input type="submit" align="right" value="搜索" style= "background-color:transparent border-top-left-radius: 0px;     /* 左上角 */
+
+            border-top-right-radius: 10px;    /* 右上角 */
+
+            border-bottom-left-radius: 0px;  /* 左下角 */
+
+            border-bottom-right-radius: 10px; /* 右下角 */ " >
+    </form>
+  </div>
+</header>
+<nav>
+  <ul>
+    <li><a href="index.html">个人主页</a></li>
+    <li><a href="myself/mine.html">个人简介</a></li>
+    <li><a href="mydaypaper/diary.html">个人小记</a></li>
+    <li><a href="myphoto/photo.html">个人照片</a></li>
+    <li><a href="Little egg/love.html">小小彩蛋</a></li>
+  </ul>
+
+</nav>
+<div class="banner_box">
+  <audio id="music" src="image/mood.mp3" loop autoplay controls style="background-color:transparent"></audio>
+  <p style="text-align: center;"><img onClick="play()" src="image/avatar.jpg" alt="头像" width="100" height="100" style="border: #000 solid 1px;
+				display: block;
+				margin: 1px auto;
+				border-radius: 50%;
+				transition: all 2.0s;
+	" > <br>
+	   <div id="t" class="showtime"></div>
+    世界这么大，我想去看看<br>
+    每一刻都是崭新的，无人可知下一秒将会上演的剧情，面对着未知的下一秒，我们能做的只有期待。 </p>
+	<div class="banner" >
+        <img  src="image/1 (1).jpg" width="980" height="210" alt="1"> 
+        <img  src="image/1 (2).jpg" width="980" height="210" alt="2">
+		<img  src="image/1 (3).jpg" width="980" height="210" alt="1"> 
+        <img  src="image/1 (4).jpg" width="980" height="210" alt="2">
+		</div>
+        
+</div>
+<div class="center">
+  <aside>
+    <nav> <a href="#photo">生活照片</a><br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <a href="#life">大学生活</a><br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <a href="#skill">个人技能</a><br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+    </nav>
+  </aside>
+  <main>
+    <h2 id="photo">照片</h2>
+    <img src="image/1 (1).jpg" width="200" alt="1" > <img src="image/1 (2).jpg" width="200" alt="2" > <img src="image/1 (3).jpg" width="200" alt="3"><br>
+    <h2 id="life">生活</h2>
+    <h3>我的大学生活</h3>
+    <div class="introduce">
+      <div class="introduce_item"> <img class="introduce_item_img" src="image/1 (4).jpg" alt=""> <span class="introduce_item_title">天空还是一片浅蓝,转眼间东方出现了一道红霞,红霞慢慢地在扩大，不大一会就染红了小半边天。颜色红得可爱， 又 过了一会儿,在那个地方出现了太阳的小半边脸。</span> </div>
+      <div class="introduce_item"> <span class="introduce_item_titles">当清晨的阳光洒进我们温馨的寝室，忙碌的一天又开始了，闹钟开始响起，每个人睡眼惺忪，从床上爬起，忙忙碌碌的穿梭在食堂与教室之间</span> <img class="introduce_item_img" src="image/qixian.jpg" alt=""> </div>
+      <div class="introduce_item"> <img class="introduce_item_img" src="image/1 (3).jpg" alt=""> <span class="introduce_item_title">温暖的阳光照耀着大地，远处的小山都金灿灿的美轮美奂，它穿梭于微隙的气息。舒倘，漫长。紫檀的香味，弥漫在春日，把天地间一切空虚盈满，阳光下，是一道纤绝的尘陌，呢喃着天真，充盈着那抹曾经深不可测的孤清而飘逸的影。</span> </div>
+      <div class="introduce_item"> <span class="introduce_item_titles">当晚自习结束后，抬头望向天空，几颗大而亮的星星挂在夜空，仿佛是天上的人儿提着灯笼在巡视那浩瀚的太空。美丽极了，裹紧衣裳，在这优美的夜色中慢慢的走回寝室。</span> <img class="introduce_item_img" src="image/1 (6).jpg" alt=""> </div>
+    </div>
+    <h2 id="skill">技能</h2>
+    <div class="top"><a href="#top"> <img alt="top" src="image/TOP.jpg"> </a></div>
+    <h3>HTML 5</h3>
+    <br>
+    熟悉 HTML5 网站的架构和开发<br>
+    <h3>CSS</h3>
+    <br>
+    熟悉使用 CSS 写响应式网站、动画等<br>
+    <h3>JavaScript</h3>
+    <br>
+    能使用 JS 制作简单的程序、交互与特效<br>
+    <a href="https://www.runoob.com/w3cnote/a-beginners-guide-to-web-development.html" target="_blank"><br>
+    <h2 style="color: white">友情链接</h2>
+    </a><br>
+    <h3 style="color: white">其他链接</h3>
+    <a href="exercises/article.html" target="_blank" style="color: black">课堂练习-article</a> <br>
+    <a href="exercises/list.html" target="_blank" style="color: black">课堂练习-list</a><br>
+    <a href="exercises/table.html" style="color: black">课堂练习-table</a><br>
+  </main>
+</div>
+<div align="center">
+  <footer style="color: aliceblue">一个记录个人生活的网站<br>
+    Copyright &copy;满是夕辰&amp;南城余版权所有</footer>
+</div>
+<video src="image/snow.mp4" class="bjing" autoplay loop muted></video>
+
+
+</body>
+</html>

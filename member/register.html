@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="register/html; charset=gb2312">
+<title>注册</title>
+<style>
+body {
+	background: url('../image/1 (6).jpg') no-repeat;
+	background-size:cover;
+	
+}
+#loginDiv {
+	width: 20%;
+	height: 650px;
+	background-color: #00000085;
+	margin: auto;
+	margin-top: 10%;
+	text-align: center;
+	border-radius: 10px;
+	padding: 50px 50px;
+}
+#name_trip {
+	margin-left: 50px;
+	color: red;
+}
+p, .sexDiv {
+	margin-top: 10px;
+	margin-left: 20px;
+	text-align: left;
+	color: azure;
+}
+.sexDiv>input {
+	width: 30px;
+	height: 17px;
+}
+input, select {
+	margin-left: 15px;
+	border-radius: 5px;
+	border-style: hidden;
+	height: 30px;
+	width: 180px;
+	background-color: rgba(105, 105, 105, 0.5);
+	outline: none;
+	color: #f0edf3;
+	padding-left: 10px;
+}
+.button {
+	margin-top: 30px;
+	width: 25%;
+	height: 30px;
+	border-radius: 10px;
+	border: 0;
+	color: #fff;
+	font-size: 15px;
+	background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+	cursor: pointer;
+}
+.introduce {
+	margin-left: 110px;
+}
+.introduce>textarea {
+	background-color: rgba(216, 191, 216, 0.5);
+	border-style: hidden;
+	outline: none;
+	border-radius: 5px;
+}
+h1 {
+	color: #ffffff90;
+	margin-top: 5%;
+}
+b {
+	margin-left: 50px;
+	color: #FFEB3B;
+	font-size: 10px;
+	font-weight: initial;
+}
+</style>
+</head>
+
+<body>
+<div id="loginDiv"> <a href="../index.html"><img src="../image/logo.png" width="200" alt="logo" align="center" style="opacity:0.5"></a>
+  <form action="user">
+    <h1>注册</h1>
+    <p>用户名:<br>
+      <input id="userNname" type="text" autofocus required>
+      <label id="name_trip"></label>
+    </p>
+    <p> 密码:<br>
+      <input id="password" type="password" required>
+      <label id="password_trip"></label>
+    </p>
+    <p>确认密码:<br>
+      <input id="surePassword" type="password" required>
+      <label id="surePassword_trip"></label>
+    </p>
+    <div class="sexDiv"> 性别:<br>
+      <input class="userSex" name="sex" value="boy" type="radio">
+      男
+      <input class="userSex" name="sex" value="girl" type="radio">
+      女
+      <label id="sex_trip"></label>
+    </div>
+    <p> 邮箱:<br>
+      <input id="email" type="email" required>
+      <label id="emil_trip"></label>
+    </p>
+    <p >
+      <input type="submit" class="button" onblur="checkForm()" value="确认">
+      <input type="reset" class="button" value="重设">
+    </p>
+  </form>
+  <footer style="color: aliceblue color: rgba(0, 0, 0, 1.0);">一个记录个人生活的网站<br>
+    Copyright &copy;满是夕辰&amp;南城余版权所有</footer>
+</div>
+</body>
+<script type="text/javascript">
+    function trip(obj, trip) {
+        document.getElementById(obj).innerHTML = "<b>" + trip + "</b>";
+    }
+ 
+    function checkSex() {
+        var sexNum = document.getElementsByName("sex");
+        var sex = "";
+        for (let i = 0; i < sexNum.length; ++i) {
+            if (sexNum[i].checked) {
+                sex = sexNum[i];
+             }
+ 
+         }
+         if (sex == "") {
+             trip("sex_trip", "ERROR!!");
+             return false;
+         } else {
+             trip("sex_trip", "OK!!");
+         }
+    }
+ 
+    function checkForm() {
+        checkSelect();
+        checkHobby();
+        checkSex();
+ 
+        var trip = document.getElementsByName("em");
+        var tripV = trip.inerHTML();
+      
+        var userNname = document.getElementById("userNname");
+        var uName = userNname.value;
+        if (uName.length < 1 || uName.length > 10) {
+            trip("name_trip", "�˺ų���Ϊ1-10λ!!");
+            return false;
+        } else {
+            trip("name_trip", "OK!!");
+ 
+        }
+ 
+       
+        var password = document.getElementById("password");
+        var userPass = password.value;
+        if (userPass.length < 6) {
+            trip("password_trip", "����Ҫ>6λ!!");
+            return false;
+        } else {
+            trip("password_trip", "OK!!");
+        }
+ 
+      
+        var surePassword = document.getElementById("surePassword");
+        var surePass = surePassword.value;
+        if (userPass != surePass) {
+            trip("surePassword_trip", "�������벻һ��!!");
+            return false;
+        }
+ 
+        var inputEmail = document.getElementById("email");
+        var uEmail = inputEmail.value;
+        if (!/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(\.[a-zA-Z0-9_-])+/.test(uEmail)) {
+            trip("emil_trip", "���䲻�Ϸ�!!");
+            return false;
+        } else {
+            trip("emil_trip", "OK!!");
+        }
+    }
+ 
+    function submitT() {
+        if (checkForm()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>个人简介</title>
+<link rel="stylesheet" type="text/css" href="../CSS/dyback.css">
+<link rel="stylesheet" type="text/css" href="../CSS/avator.css">
+<style>
+header {
+	width: 1240px;
+	height: 120px;
+	border: 1px blue;
+	margin: 0 auto;
+}
+header a, img, h2 {
+	float: left;
+}
+nav {
+	width: 100%;
+	height: 40px;
+	background-color: transparent
+}
+nav {
+	width: 100%;
+	height: 40px;
+	background-color: transparent
+}
+main {
+	width: 100px;
+	height: 500px;
+	float: left;
+	background-color: transparent;
+}
+footer {
+	width: 100%;
+	height: 50px;
+	position: relative;
+	background-color: transparent;
+}
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: transparent;
+}
+li {
+	float: left;
+}
+li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+li a:hover {
+	background-color: transparent;
+}
+a {
+	text-decoration: none;
+	color: white
+}
+.timecolor {
+	color: white;
+}
+.pcolor {
+	color: white;
+}
+.kuang1 {
+	border: 1px solid white;
+	padding: 10px;
+	width: 300px;
+	box-shadow: 1px 1px 5px #666;
+	border-radius: 10px;
+	transition: all 1s;
+	position: absolute;
+	top: 30%;
+	left: 20%;
+}
+.kuang2 {
+	border: 1px solid white;
+	padding: 10px;
+	width: 300px;
+	box-shadow: 1px 1px 5px #666;
+	border-radius: 10px;
+	transition: all 1s;
+	top: 50%;
+	left: 60%;
+	position: absolute;
+}
+.kuang3 {
+	transition: all 1s;
+	top: 110%;
+	left: 40%;
+	position: absolute;
+}
+</style>
+<script>
+    function mytime(){
+        var a = new Date();
+        var b = a.toLocaleTimeString();
+        var c = a.toLocaleDateString();
+        document.getElementById("time").innerHTML = c+"&nbsp"+b;
+        }
+    setInterval(function() {mytime()},1000);
+</script>
+</head>
+
+<body>
+<header><a href="../index.html"><img src="../image/logo.png" alt="logo" width="200px" style="opacity: 0.5;"></a>
+  <h2><em>MyLife-the world is large,which should be seen by everyone.</em></h2>
+</header>
+<nav>
+  <ul>
+    <li><a href="../index.html">个人主页</a></li>
+    <li><a href="../myself/mine.html">个人简介</a></li>
+    <li><a href="../mydaypaper/diary.html">个人小记</a></li>
+    <li><a href="../myphoto/photo.html">个人照片</a></li>
+    <li><a href="../Little egg/love.html">小小彩蛋</a></li>
+  </ul>
+</nav>
+<video src="../image/snow.mp4" class="bjing" autoplay loop muted></video>
+<main>
+  <div class="headersculpture" style="position: absolute;top:75%;
+        left:20%;">
+    <div class="avator"><img onClick="play()" src="../image/avatar.jpg" alt="头像" width="100" height="100"></div>
+    <div class="pcolor">
+      <hr>
+      <h2>&nbsp;满是夕辰</h2>
+      <hr>
+      <a href="../index.html">
+      <h3>&nbsp; 个人主页</h3>
+      </a></div>
+  </div>
+  <div class="kuang1">
+    <div class="pcolor">
+      <h4>你当前时间与所处位置的天气情况：</h4>
+    </div>
+    <div class="timecolor"><span id="time"></span></div>
+    <iframe name="weather_inc" 
+	src="http://i.tianqi.com/index.php?c=code&id=7" 
+	style="border:solid 0px #256C7B"> </iframe>
+  </div>
+  <div class="kuang2">
+    <p>
+    <div class="pcolor">
+      <h4>欢迎来到满是夕辰的个人生活网站！</h4>
+    </div>
+    爱好计算机，会去自学自己感兴趣的一切东西<br>
+    略懂H5，css，js；爱好折腾去解决一切问题<br>
+    这条路我才刚刚迈开了我的第一步<br>
+    路上的坎一定会非常多，但在我眼里<br>
+    没有什么问题是尝试不能解决的，如果有那就多尝试几次甚至上百次<br>
+    即使前方的路看似绝境，也要有硬生生给自己开出一条路的勇气
+    </p>
+  </div>
+</main>
+<div  class="kuang3">
+  <footer style="color: aliceblue">
+    <p style="text-align: center">一个记录个人生活的网站<br>
+      Copyright &copy;满是夕辰&amp;南城余版权所有</p>
+  </footer>
+</div>
+</body>
+</html>
